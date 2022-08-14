@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetItemResponse xmlns="urn:ebay:apis:eBLBaseComponents">
+	<Timestamp>2022-08-14T17:56:58.817Z</Timestamp>
+	<Ack>Success</Ack>
+	<Version>1193</Version>
+	<Build>E1193_CORE_API_19146280_R1</Build>
+	<Item>
+		<AutoPay>true</AutoPay>
+		<BuyerProtection>ItemIneligible</BuyerProtection>
+		<BuyItNowPrice currencyID="USD">0.0</BuyItNowPrice>
+		<Country>US</Country>
+		<Currency>USD</Currency>
+		<GiftIcon>0</GiftIcon>
+		<ItemID>384980956057</ItemID>
+		<ListingDetails>
+			<Adult>false</Adult>
+			<BindingAuction>false</BindingAuction>
+			<CheckoutEnabled>true</CheckoutEnabled>
+			<ConvertedBuyItNowPrice currencyID="USD">0.0</ConvertedBuyItNowPrice>
+			<ConvertedStartPrice currencyID="USD">43.99</ConvertedStartPrice>
+			<HasReservePrice>false</HasReservePrice>
+			<StartTime>2022-06-30T23:31:59.000Z</StartTime>
+			<EndTime>2022-08-30T23:31:59.000Z</EndTime>
+			<ViewItemURL>https://www.ebay.com/itm/Honda-Genuine-96-00-Civic-EK-Type-R-Red-Stitch-Shift-Boot-83414-S04-Z50ZA-USA-/384980956057</ViewItemURL>
+			<HasUnansweredQuestions>false</HasUnansweredQuestions>
+			<HasPublicMessages>false</HasPublicMessages>
+			<ViewItemURLForNaturalSearch>https://www.ebay.com/itm/Honda-Genuine-96-00-Civic-EK-Type-R-Red-Stitch-Shift-Boot-83414-S04-Z50ZA-USA-/384980956057</ViewItemURLForNaturalSearch>
+		</ListingDetails>
+		<ListingDuration>GTC</ListingDuration>
+		<ListingType>FixedPriceItem</ListingType>
+		<Location>Saint Paul, Minnesota</Location>
+		<PrimaryCategory>
+			<CategoryID>174077</CategoryID>
+			<CategoryName>eBay Motors:Parts &amp; Accessories:Car &amp; Truck Parts &amp; Accessories:Interior Parts &amp; Accessories:Shift Knobs</CategoryName>
+		</PrimaryCategory>
+		<PrivateListing>false</PrivateListing>
+		<ProductListingDetails>
+			<UPC>Does not apply</UPC>
+			<BrandMPN>
+				<Brand>Honda</Brand>
+			</BrandMPN>
+			<IncludeeBayProductDetails>true</IncludeeBayProductDetails>
+		</ProductListingDetails>
+		<Quantity>15</Quantity>
+		<ReviseStatus>
+			<ItemRevised>true</ItemRevised>
+		</ReviseStatus>
+		<Seller>
+			<AboutMePage>false</AboutMePage>
+			<Email>Invalid Request</Email>
+			<FeedbackScore>83</FeedbackScore>
+			<PositiveFeedbackPercent>100.0</PositiveFeedbackPercent>
+			<eBayGoodStanding>true</eBayGoodStanding>
+			<NewUser>false</NewUser>
+			<RegistrationDate>2022-03-19T15:47:22.000Z</RegistrationDate>
+			<Site>US</Site>
+			<UserID>ichibananime-ichibancarparts</UserID>
+			<VATStatus>NoVATTax</VATStatus>
+			<SellerInfo>
+				<AllowPaymentEdit>true</AllowPaymentEdit>
+				<CheckoutEnabled>true</CheckoutEnabled>
+				<CIPBankAccountStored>false</CIPBankAccountStored>
+				<GoodStanding>true</GoodStanding>
+				<LiveAuctionAuthorized>false</LiveAuctionAuthorized>
+				<QualifiesForB2BVAT>false</QualifiesForB2BVAT>
+				<StoreOwner>true</StoreOwner>
+				<StoreURL>https://stores.ebay.com/ichibananime</StoreURL>
+				<TopRatedSeller>true</TopRatedSeller>
+			</SellerInfo>
+			<MotorsDealer>false</MotorsDealer>
+		</Seller>
+		<SellingStatus>
+			<BidCount>0</BidCount>
+			<BidIncrement currencyID="USD">0.0</BidIncrement>
+			<ConvertedCurrentPrice currencyID="USD">43.99</ConvertedCurrentPrice>
+			<CurrentPrice currencyID="USD">43.99</CurrentPrice>
+			<MinimumToBid currencyID="USD">43.99</MinimumToBid>
+			<QuantitySold>12</QuantitySold>
+			<ReserveMet>true</ReserveMet>
+			<SecondChanceEligible>false</SecondChanceEligible>
+			<ListingStatus>Active</ListingStatus>
+			<QuantitySoldByPickupInStore>0</QuantitySoldByPickupInStore>
+		</SellingStatus>
+		<ShippingDetails>
+			<ApplyShippingDiscount>false</ApplyShippingDiscount>
+			<CalculatedShippingRate>
+				<WeightMajor measurementSystem="English" unit="lbs">0</WeightMajor>
+				<WeightMinor measurementSystem="English" unit="oz">0</WeightMinor>
+			</CalculatedShippingRate>
+			<SalesTax>
+				<SalesTaxPercent>0.0</SalesTaxPercent>
+				<ShippingIncludedInTax>false</ShippingIncludedInTax>
+			</SalesTax>
+			<ShippingServiceOptions>
+				<ShippingService>USPSFirstClass</ShippingService>
+				<ShippingServiceCost currencyID="USD">0.0</ShippingServiceCost>
+				<ShippingServiceAdditionalCost currencyID="USD">0.0</ShippingServiceAdditionalCost>
+				<ShippingServicePriority>1</ShippingServicePriority>
+				<ExpeditedService>false</ExpeditedService>
+				<ShippingTimeMin>2</ShippingTimeMin>
+				<ShippingTimeMax>5</ShippingTimeMax>
+				<FreeShipping>true</FreeShipping>
+			</ShippingServiceOptions>
+			<ShippingServiceOptions>
+				<ShippingService>USPSPriority</ShippingService>
+				<ShippingServiceCost currencyID="USD">4.99</ShippingServiceCost>
+				<ShippingServiceAdditionalCost currencyID="USD">2.99</ShippingServiceAdditionalCost>
+				<ShippingServicePriority>2</ShippingServicePriority>
+				<ExpeditedService>false</ExpeditedService>
+				<ShippingTimeMin>1</ShippingTimeMin>
+				<ShippingTimeMax>4</ShippingTimeMax>
+			</ShippingServiceOptions>
+			<ShippingType>Flat</ShippingType>
+			<ThirdPartyCheckout>false</ThirdPartyCheckout>
+			<ShippingDiscountProfileID>0</ShippingDiscountProfileID>
+			<InternationalShippingDiscountProfileID>0</InternationalShippingDiscountProfileID>
+			<ExcludeShipToLocation>Africa</ExcludeShipToLocation>
+			<ExcludeShipToLocation>Asia</ExcludeShipToLocation>
+			<ExcludeShipToLocation>Central America and Caribbean</ExcludeShipToLocation>
+			<ExcludeShipToLocation>Europe</ExcludeShipToLocation>
+			<ExcludeShipToLocation>Middle East</ExcludeShipToLocation>
+			<ExcludeShipToLocation>North America</ExcludeShipToLocation>
+			<ExcludeShipToLocation>Oceania</ExcludeShipToLocation>
+			<ExcludeShipToLocation>Southeast Asia</ExcludeShipToLocation>
+			<ExcludeShipToLocation>South America</ExcludeShipToLocation>
+			<SellerExcludeShipToLocationsPreference>false</SellerExcludeShipToLocationsPreference>
+		</ShippingDetails>
+		<ShipToLocations>US</ShipToLocations>
+		<Site>eBayMotors</Site>
+		<StartPrice currencyID="USD">43.99</StartPrice>
+		<Storefront>
+			<StoreCategoryID>41917412012</StoreCategoryID>
+			<StoreCategory2ID>0</StoreCategory2ID>
+			<StoreURL>https://stores.ebay.com/ichibananime</StoreURL>
+		</Storefront>
+		<TimeLeft>P16DT5H35M1S</TimeLeft>
+		<Title>Honda Genuine 96-00 Civic EK Type R Red Stitch Shift Boot 83414-S04-Z50ZA USA</Title>
+		<LocationDefaulted>true</LocationDefaulted>
+		<BuyerResponsibleForShipping>false</BuyerResponsibleForShipping>
+		<PostalCode>551**</PostalCode>
+		<PictureDetails>
+			<GalleryType>Gallery</GalleryType>
+			<PhotoDisplay>PicturePack</PhotoDisplay>
+			<PictureURL>https://i.ebayimg.com/00/s/MTE4OFgxMjAw/z/5ecAAOSwRgBivQQ9/$_57.PNG?set_id=880000500F</PictureURL>
+			<PictureURL>https://i.ebayimg.com/00/s/MTYwMFgxMjAw/z/9lkAAOSw9CZivQRM/$_57.PNG?set_id=880000500F</PictureURL>
+			<PictureURL>https://i.ebayimg.com/00/s/NDIxWDUwMQ==/z/oigAAOSwbNZivjNT/$_57.PNG?set_id=880000500F</PictureURL>
+			<PictureSource>EPS</PictureSource>
+		</PictureDetails>
+		<DispatchTimeMax>1</DispatchTimeMax>
+		<ProxyItem>false</ProxyItem>
+		<ItemSpecifics>
+			<NameValueList>
+				<Name>OE Spec or Performance/Custom</Name>
+				<Value>OE Spec</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Other Part Number</Name>
+				<Value>83414S04Z50ZA</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Fitment Type</Name>
+				<Value>Direct Replacement</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Color</Name>
+				<Value>Black</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Items Included</Name>
+				<Value>Shift Boot</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Manufacturer Part Number</Name>
+				<Value>83414-S04-Z50ZA</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Material</Name>
+				<Value>Leatherette</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Placement on Vehicle</Name>
+				<Value>Front</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Brand</Name>
+				<Value>Honda</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Type</Name>
+				<Value>Boot</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>OE/OEM Part Number</Name>
+				<Value>83414-S04-Z50ZA</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Country/Region of Manufacture</Name>
+				<Value>Japan</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Universal Fitment</Name>
+				<Value>No</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+			<NameValueList>
+				<Name>Performance Part</Name>
+				<Value>No</Value>
+				<Source>ItemSpecific</Source>
+			</NameValueList>
+		</ItemSpecifics>
+		<BuyerGuaranteePrice currencyID="USD">20000.0</BuyerGuaranteePrice>
+		<IntangibleItem>false</IntangibleItem>
+		<ReturnPolicy>
+			<ReturnsWithinOption>Days_30</ReturnsWithinOption>
+			<ReturnsWithin>30 Days</ReturnsWithin>
+			<ReturnsAcceptedOption>ReturnsAccepted</ReturnsAcceptedOption>
+			<ReturnsAccepted>Returns Accepted</ReturnsAccepted>
+			<ShippingCostPaidByOption>Seller</ShippingCostPaidByOption>
+			<ShippingCostPaidBy>Seller</ShippingCostPaidBy>
+			<InternationalReturnsAcceptedOption>ReturnsAccepted</InternationalReturnsAcceptedOption>
+			<InternationalReturnsWithinOption>Days_30</InternationalReturnsWithinOption>
+			<InternationalShippingCostPaidByOption>Buyer</InternationalShippingCostPaidByOption>
+		</ReturnPolicy>
+		<ConditionID>1000</ConditionID>
+		<ConditionDisplayName>New</ConditionDisplayName>
+		<PostCheckoutExperienceEnabled>false</PostCheckoutExperienceEnabled>
+		<ShippingPackageDetails>
+			<ShippingIrregular>false</ShippingIrregular>
+			<ShippingPackage>Letter</ShippingPackage>
+			<WeightMajor measurementSystem="English" unit="lbs">0</WeightMajor>
+			<WeightMinor measurementSystem="English" unit="oz">0</WeightMinor>
+		</ShippingPackageDetails>
+		<TopRatedListing>true</TopRatedListing>
+		<HideFromSearch>false</HideFromSearch>
+		<eBayPlus>false</eBayPlus>
+		<eBayPlusEligible>false</eBayPlusEligible>
+		<IsSecureDescription>true</IsSecureDescription>
+	</Item>
+</GetItemResponse>
