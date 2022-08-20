@@ -27,3 +27,10 @@ $ npm install
 ```bash
 $ npm run start
 ```
+
+# :books: To get data
+
+- Check out data files in `data` diretory.
+  - Files are formatted in CSV format.
+
+- If result data doesn't exist for your keywords, the app may print out `Result is empty`.
