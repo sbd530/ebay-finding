@@ -12,6 +12,7 @@ const EBAY_TRADING_URL = process.env.EBAY_TRADING_URL || '';
 const EBAY_SEARCH_URL = process.env.EBAY_SEARCH_URL || '';
 const EBAY_API_SITEID = process.env.EBAY_API_SITEID || '0';
 const SUCCESS_MSG = 'Success';
+const _maxNumEntries = parseInt(process.env.MAX_NUM_ENTRIES);
 
 const searchConfig = {
     keywords: process.env.KEYWORDS,
@@ -22,16 +23,18 @@ const searchConfig = {
     currency: process.env.CURRENCY || 'USD',
     condition: process.env.CONDITION,
     sortOrder: process.env.SORT_ORDER,
-    maxNumEntries: parseInt(process.env.MAX_NUM_ENTRIES),
+    maxNumEntries: _maxNumEntries,
+    entriesPerPage: _maxNumEntries < 100 ? _maxNumEntries : 100,
     soldItemsOnly: process.env.SOLD_ITEMS_ONLY,
 };
+console.log(searchConfig);
 
 function readXml(xml) {
     if (!XMLValidator.validate(xml))
         console.error('Not XML format');
     const parsed = new XMLParser().parse(xml);
     const item = parsed.GetItemResponse.Item;
-    const nameValueList = item.ItemSpecifics.NameValueList;
+    const nameValueList = item.ItemSpecifics?.NameValueList || null;
     const mpn = nameValueList && nameValueList instanceof Array
         ? nameValueList.find(elem => elem.Name === 'Manufacturer Part Number')?.Value
         : '';
@@ -85,29 +88,29 @@ function getBaseUrl() {
     let baseUrl = EBAY_SEARCH_URL;
     baseUrl += '?OPERATION-NAME=findItemsByKeywords';
     baseUrl += '&SERVICE-VERSION=1.13.0';
-    baseUrl += '&SECURITY-APPNAME=' + EBAY_APP_ID;
+    baseUrl += `&SECURITY-APPNAME=${EBAY_APP_ID}`;
     baseUrl += '&RESPONSE-DATA-FORMAT=JSON';
     baseUrl += '&REST-PAYLOAD';
-    baseUrl += '&keywords=' + searchConfig.keywords;
+    baseUrl += `&keywords=${searchConfig.keywords}`;
     baseUrl += '&itemFilter(0).name=LocatedIn';
-    baseUrl += '&itemFilter(0).value=' + searchConfig.locatedIn;
+    baseUrl += `&itemFilter(0).value=${searchConfig.locatedIn}`;
     baseUrl += '&itemFilter(1).name=ListingType';
-    baseUrl += '&itemFilter(1).value=' + searchConfig.listingType;
+    baseUrl += `&itemFilter(1).value=${searchConfig.listingType}`;
     baseUrl += '&itemFilter(2).name=MinPrice';
-    baseUrl += '&itemFilter(2).value=' + searchConfig.minPrice;
+    baseUrl += `&itemFilter(2).value=${searchConfig.minPrice}`;
     baseUrl += '&itemFilter(2).paramName=Currency';
-    baseUrl += '&itemFilter(2).paramValue=' + searchConfig.currency;
+    baseUrl += `&itemFilter(2).paramValue=${searchConfig.currency}`;
     baseUrl += '&itemFilter(3).name=MaxPrice';
-    baseUrl += '&itemFilter(3).value=' + searchConfig.maxPrice;
+    baseUrl += `&itemFilter(3).value=${searchConfig.maxPrice}`;
     baseUrl += '&itemFilter(3).paramName=Currency';
-    baseUrl += '&itemFilter(3).paramValue=' + searchConfig.currency;
+    baseUrl += `&itemFilter(3).paramValue=${searchConfig.currency}`;
     baseUrl += '&itemFilter(4).name=SoldItemsOnly';
-    baseUrl += '&itemFilter(4).value=' + searchConfig.soldItemsOnly;
+    baseUrl += `&itemFilter(4).value=${searchConfig.soldItemsOnly}`;
     baseUrl += '&itemFilter(5).name=Condition';
-    baseUrl += '&itemFilter(5).value=' + searchConfig.condition;
+    baseUrl += `&itemFilter(5).value=${searchConfig.condition}`;
     baseUrl += '&outputSelector(0)=SellerInfo';
-    baseUrl += '&sortOrder=' + searchConfig.sortOrder;
-    baseUrl += '&paginationInput.entriesPerPage=100';
+    baseUrl += `&sortOrder=${searchConfig.sortOrder}`;
+    baseUrl += `&paginationInput.entriesPerPage=${searchConfig.entriesPerPage}`;
     baseUrl += '&paginationInput.pageNumber=';
     return baseUrl;
 }
@@ -115,7 +118,7 @@ function getBaseUrl() {
 async function convert2CSV(searchResult) {
     const count = searchResult[0]['@count'];
     if (count === '0') {
-        console.error('Result is empty');
+        console.error('Search Result is empty. Try another condition.');
         process.exit(1);
     }
     const items = searchResult[0].item;
@@ -143,6 +146,8 @@ async function convert2CSV(searchResult) {
         csv += `${itemId},${title},${viewItemURL},${sellerUserName},${price},`;
         csv += `${categoryName},${watchCount},${startTime},${endTime},`;
         csv += `${mpn || ''},${sold}${EOL}`;
+
+        console.log(`Item[${itemId}] is being parsed.`);
     }
     return csv;
 }
@@ -151,7 +156,7 @@ async function main() {
 
     let baseUrl = getBaseUrl();
     let pageNumber = 1;
-    const entriesPerPage = 100;
+    const entriesPerPage = searchConfig.entriesPerPage;
     let maxNumEntries = searchConfig.maxNumEntries;
 
     const fileName = `./data/${searchConfig.keywords.replace(' ', '_')}_${yyyymmddhhmiss()}.csv`;
